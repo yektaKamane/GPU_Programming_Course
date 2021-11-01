@@ -1,0 +1,361 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00 11197039     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::size() const
+  0.00      0.00     0.00  5041000     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**)
+  0.00      0.00     0.00  5041000     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::clear()
+  0.00      0.00     0.00  3006480     0.00     0.00  particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&)
+  0.00      0.00     0.00  2306824     0.00     0.00  apply_force(particle_t&, particle_t&)
+  0.00      0.00     0.00  2306824     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::operator[](unsigned long)
+  0.00      0.00     0.00  2000000     0.00     0.00  binNum(particle_t&, int)
+  0.00      0.00     0.00  1010647     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator()
+  0.00      0.00     0.00  1000000     0.00     0.00  move(particle_t&)
+  0.00      0.00     0.00  1000000     0.00     0.00  void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&)
+  0.00      0.00     0.00  1000000     0.00     0.00  void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&)
+  0.00      0.00     0.00  1000000     0.00     0.00  void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&)
+  0.00      0.00     0.00  1000000     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::push_back(particle_t*&&)
+  0.00      0.00     0.00  1000000     0.00     0.00  std::remove_reference<particle_t*&>::type&& std::move<particle_t*&>(particle_t*&)
+  0.00      0.00     0.00  1000000     0.00     0.00  operator new(unsigned long, void*)
+  0.00      0.00     0.00   997687     0.00     0.00  void std::_Destroy_aux<true>::__destroy<particle_t**>(particle_t**, particle_t**)
+  0.00      0.00     0.00   997687     0.00     0.00  void std::_Destroy<particle_t**>(particle_t**, particle_t**)
+  0.00      0.00     0.00   997687     0.00     0.00  void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&)
+  0.00      0.00     0.00    38880     0.00     0.00  particle_t** std::__niter_base<particle_t**>(particle_t**)
+  0.00      0.00     0.00    25920     0.00     0.00  __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::base() const
+  0.00      0.00     0.00    19440     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::max_size() const
+  0.00      0.00     0.00    12960     0.00     0.00  __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::__normal_iterator(particle_t** const&)
+  0.00      0.00     0.00    12960     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() const
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const
+  0.00      0.00     0.00    12960     0.00     0.00  std::allocator_traits<std::allocator<particle_t*> >::max_size(std::allocator<particle_t*> const&)
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&)
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_S_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&)
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_S_do_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&, std::integral_constant<bool, true>)
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_S_use_relocate()
+  0.00      0.00     0.00    12960     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_S_nothrow_relocate(std::integral_constant<bool, true>)
+  0.00      0.00     0.00    12960     0.00     0.00  particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&)
+  0.00      0.00     0.00    12960     0.00     0.00  std::enable_if<std::__is_bitwise_relocatable<particle_t*, void>::value, particle_t**>::type std::__relocate_a_1<particle_t*, particle_t*>(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&)
+  0.00      0.00     0.00    12960     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.00     0.00    11521     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long)
+  0.00      0.00     0.00     6480     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::deallocate(particle_t**, unsigned long)
+  0.00      0.00     0.00     6480     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::allocate(unsigned long, void const*)
+  0.00      0.00     0.00     6480     0.00     0.00  __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::difference_type __gnu_cxx::operator-<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&, __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&)
+  0.00      0.00     0.00     6480     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const
+  0.00      0.00     0.00     6480     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_allocate(unsigned long)
+  0.00      0.00     0.00     6480     0.00     0.00  std::allocator_traits<std::allocator<particle_t*> >::deallocate(std::allocator<particle_t*>&, particle_t**, unsigned long)
+  0.00      0.00     0.00     6480     0.00     0.00  std::allocator_traits<std::allocator<particle_t*> >::allocate(std::allocator<particle_t*>&, unsigned long)
+  0.00      0.00     0.00     6480     0.00     0.00  void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&)
+  0.00      0.00     0.00     6480     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::end()
+  0.00      0.00     0.00     6480     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::begin()
+  0.00      0.00     0.00     6480     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.00     0.00     5041     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::new_allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::~new_allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  std::allocator<particle_t*>::allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  std::allocator<particle_t*>::~allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::~_Vector_impl()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base()
+  0.00      0.00     0.00     5041     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::vector()
+  0.00      0.00     0.00     5041     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::~vector()
+  0.00      0.00     0.00        3     0.00     0.00  find_option(int, char**, char const*)
+  0.00      0.00     0.00        2     0.00     0.00  read_timer()
+  0.00      0.00     0.00        1     0.00     0.00  read_string(int, char**, char const*, char*)
+  0.00      0.00     0.00        1     0.00     0.00  init_particles(int, particle_t*)
+  0.00      0.00     0.00        1     0.00     0.00  read_int(int, char**, char const*, int)
+  0.00      0.00     0.00        1     0.00     0.00  set_size(int)
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00   25920/11197039     std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [45]
+                0.00    0.00 11171119/11197039     main [6]
+[8]      0.0    0.00    0.00 11197039         std::vector<particle_t*, std::allocator<particle_t*> >::size() const [8]
+-----------------------------------------------
+                0.00    0.00 5041000/5041000     std::vector<particle_t*, std::allocator<particle_t*> >::clear() [10]
+[9]      0.0    0.00    0.00 5041000         std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+                0.00    0.00  992646/1010647     std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() [15]
+                0.00    0.00  992646/997687      void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&) [25]
+-----------------------------------------------
+                0.00    0.00 5041000/5041000     main [6]
+[10]     0.0    0.00    0.00 5041000         std::vector<particle_t*, std::allocator<particle_t*> >::clear() [10]
+                0.00    0.00 5041000/5041000     std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+-----------------------------------------------
+                0.00    0.00    6480/3006480     void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+                0.00    0.00 1000000/3006480     void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+                0.00    0.00 1000000/3006480     void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [18]
+                0.00    0.00 1000000/3006480     void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&) [17]
+[11]     0.0    0.00    0.00 3006480         particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&) [11]
+-----------------------------------------------
+                0.00    0.00 2306824/2306824     main [6]
+[12]     0.0    0.00    0.00 2306824         apply_force(particle_t&, particle_t&) [12]
+-----------------------------------------------
+                0.00    0.00 2306824/2306824     main [6]
+[13]     0.0    0.00    0.00 2306824         std::vector<particle_t*, std::allocator<particle_t*> >::operator[](unsigned long) [13]
+-----------------------------------------------
+                0.00    0.00 2000000/2000000     main [6]
+[14]     0.0    0.00    0.00 2000000         binNum(particle_t&, int) [14]
+-----------------------------------------------
+                0.00    0.00    5041/1010647     std::vector<particle_t*, std::allocator<particle_t*> >::~vector() [63]
+                0.00    0.00   12960/1010647     void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+                0.00    0.00  992646/1010647     std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+[15]     0.0    0.00    0.00 1010647         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() [15]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     main [6]
+[16]     0.0    0.00    0.00 1000000         move(particle_t&) [16]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [18]
+[17]     0.0    0.00    0.00 1000000         void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&) [17]
+                0.00    0.00 1000000/3006480     particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&) [11]
+                0.00    0.00 1000000/1000000     operator new(unsigned long, void*) [22]
+-----------------------------------------------
+                0.00    0.00    6480/1000000     void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+                0.00    0.00  993520/1000000     void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+[18]     0.0    0.00    0.00 1000000         void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [18]
+                0.00    0.00 1000000/3006480     particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&) [11]
+                0.00    0.00 1000000/1000000     void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&) [17]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     std::vector<particle_t*, std::allocator<particle_t*> >::push_back(particle_t*&&) [20]
+[19]     0.0    0.00    0.00 1000000         void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+                0.00    0.00 1000000/3006480     particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&) [11]
+                0.00    0.00  993520/1000000     void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [18]
+                0.00    0.00    6480/6480        std::vector<particle_t*, std::allocator<particle_t*> >::end() [50]
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     main [6]
+[20]     0.0    0.00    0.00 1000000         std::vector<particle_t*, std::allocator<particle_t*> >::push_back(particle_t*&&) [20]
+                0.00    0.00 1000000/1000000     std::remove_reference<particle_t*&>::type&& std::move<particle_t*&>(particle_t*&) [21]
+                0.00    0.00 1000000/1000000     void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     std::vector<particle_t*, std::allocator<particle_t*> >::push_back(particle_t*&&) [20]
+[21]     0.0    0.00    0.00 1000000         std::remove_reference<particle_t*&>::type&& std::move<particle_t*&>(particle_t*&) [21]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&) [17]
+[22]     0.0    0.00    0.00 1000000         operator new(unsigned long, void*) [22]
+-----------------------------------------------
+                0.00    0.00  997687/997687      void std::_Destroy<particle_t**>(particle_t**, particle_t**) [24]
+[23]     0.0    0.00    0.00  997687         void std::_Destroy_aux<true>::__destroy<particle_t**>(particle_t**, particle_t**) [23]
+-----------------------------------------------
+                0.00    0.00  997687/997687      void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&) [25]
+[24]     0.0    0.00    0.00  997687         void std::_Destroy<particle_t**>(particle_t**, particle_t**) [24]
+                0.00    0.00  997687/997687      void std::_Destroy_aux<true>::__destroy<particle_t**>(particle_t**, particle_t**) [23]
+-----------------------------------------------
+                0.00    0.00    5041/997687      std::vector<particle_t*, std::allocator<particle_t*> >::~vector() [63]
+                0.00    0.00  992646/997687      std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+[25]     0.0    0.00    0.00  997687         void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&) [25]
+                0.00    0.00  997687/997687      void std::_Destroy<particle_t**>(particle_t**, particle_t**) [24]
+-----------------------------------------------
+                0.00    0.00   38880/38880       particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [38]
+[26]     0.0    0.00    0.00   38880         particle_t** std::__niter_base<particle_t**>(particle_t**) [26]
+-----------------------------------------------
+                0.00    0.00   12960/25920       void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+                0.00    0.00   12960/25920       __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::difference_type __gnu_cxx::operator-<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&, __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&) [44]
+[27]     0.0    0.00    0.00   25920         __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::base() const [27]
+-----------------------------------------------
+                0.00    0.00    6480/19440       __gnu_cxx::new_allocator<particle_t*>::allocate(unsigned long, void const*) [43]
+                0.00    0.00   12960/19440       std::allocator_traits<std::allocator<particle_t*> >::max_size(std::allocator<particle_t*> const&) [32]
+[28]     0.0    0.00    0.00   19440         __gnu_cxx::new_allocator<particle_t*>::max_size() const [28]
+-----------------------------------------------
+                0.00    0.00    6480/12960       std::vector<particle_t*, std::allocator<particle_t*> >::end() [50]
+                0.00    0.00    6480/12960       std::vector<particle_t*, std::allocator<particle_t*> >::begin() [51]
+[29]     0.0    0.00    0.00   12960         __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::__normal_iterator(particle_t** const&) [29]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const [31]
+[30]     0.0    0.00    0.00   12960         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() const [30]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [45]
+[31]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const [31]
+                0.00    0.00   12960/12960       std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() const [30]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&) [33]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&) [33]
+[32]     0.0    0.00    0.00   12960         std::allocator_traits<std::allocator<particle_t*> >::max_size(std::allocator<particle_t*> const&) [32]
+                0.00    0.00   12960/19440       __gnu_cxx::new_allocator<particle_t*>::max_size() const [28]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const [31]
+[33]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&) [33]
+                0.00    0.00   12960/12960       std::allocator_traits<std::allocator<particle_t*> >::max_size(std::allocator<particle_t*> const&) [32]
+                0.00    0.00   12960/12960       unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [40]
+-----------------------------------------------
+                0.00    0.00   12960/12960       void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[34]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::_S_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [34]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_do_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&, std::integral_constant<bool, true>) [35]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [34]
+[35]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::_S_do_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&, std::integral_constant<bool, true>) [35]
+                0.00    0.00   12960/12960       particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [38]
+-----------------------------------------------
+                0.00    0.00   12960/12960       void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[36]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::_S_use_relocate() [36]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_nothrow_relocate(std::integral_constant<bool, true>) [37]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_use_relocate() [36]
+[37]     0.0    0.00    0.00   12960         std::vector<particle_t*, std::allocator<particle_t*> >::_S_nothrow_relocate(std::integral_constant<bool, true>) [37]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_do_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&, std::integral_constant<bool, true>) [35]
+[38]     0.0    0.00    0.00   12960         particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [38]
+                0.00    0.00   38880/38880       particle_t** std::__niter_base<particle_t**>(particle_t**) [26]
+                0.00    0.00   12960/12960       std::enable_if<std::__is_bitwise_relocatable<particle_t*, void>::value, particle_t**>::type std::__relocate_a_1<particle_t*, particle_t*>(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [39]
+-----------------------------------------------
+                0.00    0.00   12960/12960       particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [38]
+[39]     0.0    0.00    0.00   12960         std::enable_if<std::__is_bitwise_relocatable<particle_t*, void>::value, particle_t**>::type std::__relocate_a_1<particle_t*, particle_t*>(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [39]
+-----------------------------------------------
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&) [33]
+[40]     0.0    0.00    0.00   12960         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [40]
+-----------------------------------------------
+                0.00    0.00    5041/11521       std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base() [61]
+                0.00    0.00    6480/11521       void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[41]     0.0    0.00    0.00   11521         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long) [41]
+                0.00    0.00    6480/6480        std::allocator_traits<std::allocator<particle_t*> >::deallocate(std::allocator<particle_t*>&, particle_t**, unsigned long) [47]
+-----------------------------------------------
+                0.00    0.00    6480/6480        std::allocator_traits<std::allocator<particle_t*> >::deallocate(std::allocator<particle_t*>&, particle_t**, unsigned long) [47]
+[42]     0.0    0.00    0.00    6480         __gnu_cxx::new_allocator<particle_t*>::deallocate(particle_t**, unsigned long) [42]
+-----------------------------------------------
+                0.00    0.00    6480/6480        std::allocator_traits<std::allocator<particle_t*> >::allocate(std::allocator<particle_t*>&, unsigned long) [48]
+[43]     0.0    0.00    0.00    6480         __gnu_cxx::new_allocator<particle_t*>::allocate(unsigned long, void const*) [43]
+                0.00    0.00    6480/19440       __gnu_cxx::new_allocator<particle_t*>::max_size() const [28]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[44]     0.0    0.00    0.00    6480         __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::difference_type __gnu_cxx::operator-<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&, __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&) [44]
+                0.00    0.00   12960/25920       __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::base() const [27]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[45]     0.0    0.00    0.00    6480         std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [45]
+                0.00    0.00   25920/11197039     std::vector<particle_t*, std::allocator<particle_t*> >::size() const [8]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const [31]
+                0.00    0.00    6480/6480        unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [52]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[46]     0.0    0.00    0.00    6480         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_allocate(unsigned long) [46]
+                0.00    0.00    6480/6480        std::allocator_traits<std::allocator<particle_t*> >::allocate(std::allocator<particle_t*>&, unsigned long) [48]
+-----------------------------------------------
+                0.00    0.00    6480/6480        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long) [41]
+[47]     0.0    0.00    0.00    6480         std::allocator_traits<std::allocator<particle_t*> >::deallocate(std::allocator<particle_t*>&, particle_t**, unsigned long) [47]
+                0.00    0.00    6480/6480        __gnu_cxx::new_allocator<particle_t*>::deallocate(particle_t**, unsigned long) [42]
+-----------------------------------------------
+                0.00    0.00    6480/6480        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_allocate(unsigned long) [46]
+[48]     0.0    0.00    0.00    6480         std::allocator_traits<std::allocator<particle_t*> >::allocate(std::allocator<particle_t*>&, unsigned long) [48]
+                0.00    0.00    6480/6480        __gnu_cxx::new_allocator<particle_t*>::allocate(unsigned long, void const*) [43]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+[49]     0.0    0.00    0.00    6480         void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_use_relocate() [36]
+                0.00    0.00   12960/1010647     std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() [15]
+                0.00    0.00   12960/25920       __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::base() const [27]
+                0.00    0.00   12960/12960       std::vector<particle_t*, std::allocator<particle_t*> >::_S_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [34]
+                0.00    0.00    6480/6480        std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [45]
+                0.00    0.00    6480/6480        std::vector<particle_t*, std::allocator<particle_t*> >::begin() [51]
+                0.00    0.00    6480/6480        __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::difference_type __gnu_cxx::operator-<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&, __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&) [44]
+                0.00    0.00    6480/6480        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_allocate(unsigned long) [46]
+                0.00    0.00    6480/3006480     particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&) [11]
+                0.00    0.00    6480/1000000     void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [18]
+                0.00    0.00    6480/11521       std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long) [41]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [19]
+[50]     0.0    0.00    0.00    6480         std::vector<particle_t*, std::allocator<particle_t*> >::end() [50]
+                0.00    0.00    6480/12960       __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::__normal_iterator(particle_t** const&) [29]
+-----------------------------------------------
+                0.00    0.00    6480/6480        void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&) [49]
+[51]     0.0    0.00    0.00    6480         std::vector<particle_t*, std::allocator<particle_t*> >::begin() [51]
+                0.00    0.00    6480/12960       __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::__normal_iterator(particle_t** const&) [29]
+-----------------------------------------------
+                0.00    0.00    6480/6480        std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [45]
+[52]     0.0    0.00    0.00    6480         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [52]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::allocator() [55]
+[53]     0.0    0.00    0.00    5041         __gnu_cxx::new_allocator<particle_t*>::new_allocator() [53]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::~allocator() [56]
+[54]     0.0    0.00    0.00    5041         __gnu_cxx::new_allocator<particle_t*>::~new_allocator() [54]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [57]
+[55]     0.0    0.00    0.00    5041         std::allocator<particle_t*>::allocator() [55]
+                0.00    0.00    5041/5041        __gnu_cxx::new_allocator<particle_t*>::new_allocator() [53]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::~_Vector_impl() [58]
+[56]     0.0    0.00    0.00    5041         std::allocator<particle_t*>::~allocator() [56]
+                0.00    0.00    5041/5041        __gnu_cxx::new_allocator<particle_t*>::~new_allocator() [54]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [60]
+[57]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [57]
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::allocator() [55]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data() [59]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base() [61]
+[58]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::~_Vector_impl() [58]
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::~allocator() [56]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [57]
+[59]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data() [59]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::vector<particle_t*, std::allocator<particle_t*> >::vector() [62]
+[60]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [60]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [57]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::vector<particle_t*, std::allocator<particle_t*> >::~vector() [63]
+[61]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base() [61]
+                0.00    0.00    5041/11521       std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long) [41]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::~_Vector_impl() [58]
+-----------------------------------------------
+                0.00    0.00    5041/5041        main [6]
+[62]     0.0    0.00    0.00    5041         std::vector<particle_t*, std::allocator<particle_t*> >::vector() [62]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [60]
+-----------------------------------------------
+                0.00    0.00    5041/5041        main [6]
+[63]     0.0    0.00    0.00    5041         std::vector<particle_t*, std::allocator<particle_t*> >::~vector() [63]
+                0.00    0.00    5041/1010647     std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() [15]
+                0.00    0.00    5041/997687      void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&) [25]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base() [61]
+-----------------------------------------------
+                0.00    0.00       1/3           main [6]
+                0.00    0.00       1/3           read_int(int, char**, char const*, int) [68]
+                0.00    0.00       1/3           read_string(int, char**, char const*, char*) [66]
+[64]     0.0    0.00    0.00       3         find_option(int, char**, char const*) [64]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[65]     0.0    0.00    0.00       2         read_timer() [65]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[66]     0.0    0.00    0.00       1         read_string(int, char**, char const*, char*) [66]
+                0.00    0.00       1/3           find_option(int, char**, char const*) [64]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[67]     0.0    0.00    0.00       1         init_particles(int, particle_t*) [67]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[68]     0.0    0.00    0.00       1         read_int(int, char**, char const*, int) [68]
+                0.00    0.00       1/3           find_option(int, char**, char const*) [64]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[69]     0.0    0.00    0.00       1         set_size(int) [69]
+-----------------------------------------------
+
+Index by function name
+
+  [65] read_timer()           [31] std::vector<particle_t*, std::allocator<particle_t*> >::max_size() const [36] std::vector<particle_t*, std::allocator<particle_t*> >::_S_use_relocate()
+  [12] apply_force(particle_t&, particle_t&) [55] std::allocator<particle_t*>::allocator() [49] void std::vector<particle_t*, std::allocator<particle_t*> >::_M_realloc_insert<particle_t*>(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >, particle_t*&&)
+  [64] find_option(int, char**, char const*) [56] std::allocator<particle_t*>::~allocator() [37] std::vector<particle_t*, std::allocator<particle_t*> >::_S_nothrow_relocate(std::integral_constant<bool, true>)
+  [66] read_string(int, char**, char const*, char*) [23] void std::_Destroy_aux<true>::__destroy<particle_t**>(particle_t**, particle_t**) [50] std::vector<particle_t*, std::allocator<particle_t*> >::end()
+  [67] init_particles(int, particle_t*) [46] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_allocate(unsigned long) [51] std::vector<particle_t*, std::allocator<particle_t*> >::begin()
+  [16] move(particle_t&)      [57] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [10] std::vector<particle_t*, std::allocator<particle_t*> >::clear()
+  [14] binNum(particle_t&, int) [58] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::~_Vector_impl() [20] std::vector<particle_t*, std::allocator<particle_t*> >::push_back(particle_t*&&)
+  [68] read_int(int, char**, char const*, int) [41] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_deallocate(particle_t**, unsigned long) [62] std::vector<particle_t*, std::allocator<particle_t*> >::vector()
+  [69] set_size(int)          [59] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data() [63] std::vector<particle_t*, std::allocator<particle_t*> >::~vector()
+  [42] __gnu_cxx::new_allocator<particle_t*>::deallocate(particle_t**, unsigned long) [15] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() [13] std::vector<particle_t*, std::allocator<particle_t*> >::operator[](unsigned long)
+  [43] __gnu_cxx::new_allocator<particle_t*>::allocate(unsigned long, void const*) [60] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [26] particle_t** std::__niter_base<particle_t**>(particle_t**)
+  [17] void __gnu_cxx::new_allocator<particle_t*>::construct<particle_t*, particle_t*>(particle_t**, particle_t*&&) [61] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::~_Vector_base() [38] particle_t** std::__relocate_a<particle_t**, particle_t**, std::allocator<particle_t*> >(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&)
+  [53] __gnu_cxx::new_allocator<particle_t*>::new_allocator() [47] std::allocator_traits<std::allocator<particle_t*> >::deallocate(std::allocator<particle_t*>&, particle_t**, unsigned long) [39] std::enable_if<std::__is_bitwise_relocatable<particle_t*, void>::value, particle_t**>::type std::__relocate_a_1<particle_t*, particle_t*>(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&)
+  [54] __gnu_cxx::new_allocator<particle_t*>::~new_allocator() [48] std::allocator_traits<std::allocator<particle_t*> >::allocate(std::allocator<particle_t*>&, unsigned long) [52] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [29] __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::__normal_iterator(particle_t** const&) [32] std::allocator_traits<std::allocator<particle_t*> >::max_size(std::allocator<particle_t*> const&) [40] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [44] __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::difference_type __gnu_cxx::operator-<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >(__gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&, __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > > const&) [18] void std::allocator_traits<std::allocator<particle_t*> >::construct<particle_t*, particle_t*>(std::allocator<particle_t*>&, particle_t**, particle_t*&&) [21] std::remove_reference<particle_t*&>::type&& std::move<particle_t*&>(particle_t*&)
+  [28] __gnu_cxx::new_allocator<particle_t*>::max_size() const [33] std::vector<particle_t*, std::allocator<particle_t*> >::_S_max_size(std::allocator<particle_t*> const&) [11] particle_t*&& std::forward<particle_t*>(std::remove_reference<particle_t*>::type&)
+  [27] __gnu_cxx::__normal_iterator<particle_t**, std::vector<particle_t*, std::allocator<particle_t*> > >::base() const [34] std::vector<particle_t*, std::allocator<particle_t*> >::_S_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&) [24] void std::_Destroy<particle_t**>(particle_t**, particle_t**)
+  [30] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_M_get_Tp_allocator() const [19] void std::vector<particle_t*, std::allocator<particle_t*> >::emplace_back<particle_t*>(particle_t*&&) [25] void std::_Destroy<particle_t**, particle_t*>(particle_t**, particle_t**, std::allocator<particle_t*>&)
+  [45] std::vector<particle_t*, std::allocator<particle_t*> >::_M_check_len(unsigned long, char const*) const [35] std::vector<particle_t*, std::allocator<particle_t*> >::_S_do_relocate(particle_t**, particle_t**, particle_t**, std::allocator<particle_t*>&, std::integral_constant<bool, true>) [22] operator new(unsigned long, void*)
+   [8] std::vector<particle_t*, std::allocator<particle_t*> >::size() const [9] std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**)

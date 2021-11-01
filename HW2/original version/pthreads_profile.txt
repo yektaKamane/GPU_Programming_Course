@@ -1,0 +1,101 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00  2928550     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::clear()
+  0.00      0.00     0.00  2882961     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**)
+  0.00      0.00     0.00  1290481     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::size() const
+  0.00      0.00     0.00   154918     0.00     0.00  move(particle_t&)
+  0.00      0.00     0.00   147052     0.00     0.00  binNum(particle_t&, int)
+  0.00      0.00     0.00     5041     0.00     0.00  __gnu_cxx::new_allocator<particle_t*>::new_allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  std::allocator<particle_t*>::allocator()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data()
+  0.00      0.00     0.00     5041     0.00     0.00  std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base()
+  0.00      0.00     0.00     5041     0.00     0.00  std::vector<particle_t*, std::allocator<particle_t*> >::vector()
+  0.00      0.00     0.00        4     0.00     0.00  find_option(int, char**, char const*)
+  0.00      0.00     0.00        2     0.00     0.00  read_timer()
+  0.00      0.00     0.00        2     0.00     0.00  read_int(int, char**, char const*, int)
+  0.00      0.00     0.00        1     0.00     0.00  read_string(int, char**, char const*, char*)
+  0.00      0.00     0.00        1     0.00     0.00  init_particles(int, particle_t*)
+  0.00      0.00     0.00        1     0.00     0.00  set_size(int)
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00 2928550/2928550     thread_routine(void*) [26]
+[8]      0.0    0.00    0.00 2928550         std::vector<particle_t*, std::allocator<particle_t*> >::clear() [8]
+                0.00    0.00 2882961/2882961     std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+-----------------------------------------------
+                0.00    0.00 2882961/2882961     std::vector<particle_t*, std::allocator<particle_t*> >::clear() [8]
+[9]      0.0    0.00    0.00 2882961         std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**) [9]
+-----------------------------------------------
+                0.00    0.00 1290481/1290481     thread_routine(void*) [26]
+[10]     0.0    0.00    0.00 1290481         std::vector<particle_t*, std::allocator<particle_t*> >::size() const [10]
+-----------------------------------------------
+                0.00    0.00  154918/154918      thread_routine(void*) [26]
+[11]     0.0    0.00    0.00  154918         move(particle_t&) [11]
+-----------------------------------------------
+                0.00    0.00  147052/147052      thread_routine(void*) [26]
+[12]     0.0    0.00    0.00  147052         binNum(particle_t&, int) [12]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::allocator() [14]
+[13]     0.0    0.00    0.00    5041         __gnu_cxx::new_allocator<particle_t*>::new_allocator() [13]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [15]
+[14]     0.0    0.00    0.00    5041         std::allocator<particle_t*>::allocator() [14]
+                0.00    0.00    5041/5041        __gnu_cxx::new_allocator<particle_t*>::new_allocator() [13]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [17]
+[15]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [15]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data() [16]
+                0.00    0.00    5041/5041        std::allocator<particle_t*>::allocator() [14]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [15]
+[16]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data() [16]
+-----------------------------------------------
+                0.00    0.00    5041/5041        std::vector<particle_t*, std::allocator<particle_t*> >::vector() [18]
+[17]     0.0    0.00    0.00    5041         std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [17]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl() [15]
+-----------------------------------------------
+                0.00    0.00    5041/5041        main [6]
+[18]     0.0    0.00    0.00    5041         std::vector<particle_t*, std::allocator<particle_t*> >::vector() [18]
+                0.00    0.00    5041/5041        std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base() [17]
+-----------------------------------------------
+                0.00    0.00       1/4           main [6]
+                0.00    0.00       1/4           read_string(int, char**, char const*, char*) [22]
+                0.00    0.00       2/4           read_int(int, char**, char const*, int) [21]
+[19]     0.0    0.00    0.00       4         find_option(int, char**, char const*) [19]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[20]     0.0    0.00    0.00       2         read_timer() [20]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[21]     0.0    0.00    0.00       2         read_int(int, char**, char const*, int) [21]
+                0.00    0.00       2/4           find_option(int, char**, char const*) [19]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[22]     0.0    0.00    0.00       1         read_string(int, char**, char const*, char*) [22]
+                0.00    0.00       1/4           find_option(int, char**, char const*) [19]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[23]     0.0    0.00    0.00       1         init_particles(int, particle_t*) [23]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[24]     0.0    0.00    0.00       1         set_size(int) [24]
+-----------------------------------------------
+
+Index by function name
+
+  [20] read_timer()           [21] read_int(int, char**, char const*, int) [16] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl_data::_Vector_impl_data()
+  [19] find_option(int, char**, char const*) [24] set_size(int) [17] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_base()
+  [22] read_string(int, char**, char const*, char*) [13] __gnu_cxx::new_allocator<particle_t*>::new_allocator() [9] std::vector<particle_t*, std::allocator<particle_t*> >::_M_erase_at_end(particle_t**)
+  [23] init_particles(int, particle_t*) [10] std::vector<particle_t*, std::allocator<particle_t*> >::size() const [8] std::vector<particle_t*, std::allocator<particle_t*> >::clear()
+  [11] move(particle_t&)      [14] std::allocator<particle_t*>::allocator() [18] std::vector<particle_t*, std::allocator<particle_t*> >::vector()
+  [12] binNum(particle_t&, int) [15] std::_Vector_base<particle_t*, std::allocator<particle_t*> >::_Vector_impl::_Vector_impl()

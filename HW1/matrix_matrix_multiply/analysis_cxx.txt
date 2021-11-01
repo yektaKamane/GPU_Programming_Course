@@ -1,0 +1,39 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00        6     0.00     0.00  wtime()
+  0.00      0.00     0.00        3     0.00     0.00  verify(double*, double*, int)
+  0.00      0.00     0.00        1     0.00     0.00  matmat_ijk(double*, double*, double*, int)
+  0.00      0.00     0.00        1     0.00     0.00  matmat_ikj(double*, double*, double*, int)
+  0.00      0.00     0.00        1     0.00     0.00  matmat_jki(double*, double*, double*, int)
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00       6/6           main [6]
+[8]      0.0    0.00    0.00       6         wtime() [8]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[9]      0.0    0.00    0.00       3         verify(double*, double*, int) [9]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[10]     0.0    0.00    0.00       1         matmat_ijk(double*, double*, double*, int) [10]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[11]     0.0    0.00    0.00       1         matmat_ikj(double*, double*, double*, int) [11]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[12]     0.0    0.00    0.00       1         matmat_jki(double*, double*, double*, int) [12]
+-----------------------------------------------
+
+Index by function name
+
+  [10] matmat_ijk(double*, double*, double*, int) [12] matmat_jki(double*, double*, double*, int) [9] verify(double*, double*, int)
+  [11] matmat_ikj(double*, double*, double*, int) [8] wtime()
