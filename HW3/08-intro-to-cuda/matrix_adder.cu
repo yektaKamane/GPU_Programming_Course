@@ -1,96 +1,101 @@
-// $Smake: nvcc -arch=sm_30 -O2 -o %F %f
-//
-// add-vectors.cu - addition of two arrays on GPU device
-//
-// This program follows a very standard pattern:
-//  1) allocate memory on host
-//  2) allocate memory on device
-//  3) initialize memory on host
-//  4) copy memory from host to device
-//  5) execute kernel(s) on device
-//  6) copy result(s) from device to host
-//
-// Note: it may be possible to initialize memory directly on the device,
-// in which case steps 3 and 4 are not necessary, and step 1 is only
-// necessary to allocate memory to hold results.
 
 #include <stdio.h>
 #include <cuda.h>
 
-//-----------------------------------------------------------------------------
-// Kernel that executes on CUDA device
-
 __global__ void add_matrices(
-    float *c,      // out - pointer to result vector c
-    float *a,      // in  - pointer to summand vector a
-    float *b,      // in  - pointer to summand vector b
-    int n,         // in  - vector length
-    int m
+    float *c,      // out - pointer to result matrix c
+    float *a,      // in  - pointer to summand matrix a
+    float *b,      // in  - pointer to summand matrix b
+    int m,         // in  - matrix length
+    int n          // in  - matrix lenght
     )
 {
-    // Assume single block grid and 1-D block
-    const int idx = blockIdx.x * blockDim.x + threadIdx.x;
+	// To DO: Device a row major indexing
+	int rowID = threadIdx.y + blockIdx.y * blockDim.y; 	// Row address
+	int colID = threadIdx.x + blockIdx.x * blockDim.x;	// Column Address
+	int elemID;											                    // Element address
 
-    // Only do calculation if we have real data to work with
-    if ( idx < n ) c[idx] = a[idx] + b[idx];
+    // a_ij = a[i][j], where a is in row major order
+	if(rowID < m && colID < n){
+		elemID = colID + rowID * n; 				
+		c[elemID] = a[elemID] + b[elemID];
+	}
 }
 
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-// Main program executes on host device
-
-int main( int argc, char* argv[] )
-{
-    // determine vector length
+int main( int argc, char* argv[] ){
+    // determine matrix length
     int n = 10;      // set default length
-    if ( argc > 1 )
-    {
+    int m = 10;
+
+    if ( argc > 1 ){
         n = atoi( argv[1] );  // override default length
-        if ( n <= 0 )
-        {
-            fprintf( stderr, "Vector length must be positive\n" );
+        if ( n <= 0 ){
+            fprintf( stderr, "Matrix length must be positive\n" );
             return EXIT_FAILURE;
+        }
+        if (argc > 2){
+            m = atoi( argv[2] );
+            if (m <= 0 ){
+               fprintf( stderr, "Matrix length must be positive\n" );
+               return EXIT_FAILURE;
+            }
         }
     }
 
-    // determine vector size in bytes
-    const size_t vector_size = n * sizeof( float );
+    // determine matrix size in bytes
+    const size_t matrix_size = (n * m) * sizeof( float );
 
-    // declare pointers to vectors in host memory and allocate memory
+    // declare pointers to matrices in host memory and allocate memory
     float *a, *b, *c;
-    a = (float*) malloc( vector_size );
-    b = (float*) malloc( vector_size );
-    c = (float*) malloc( vector_size );
+    a = (float*) malloc( matrix_size );
+    b = (float*) malloc( matrix_size );
+    c = (float*) malloc( matrix_size );
 
-    // declare pointers to vectors in device memory and allocate memory
+    // declare pointers to matrices in device memory and allocate memory
     float *a_d, *b_d, *c_d;
-    cudaMalloc( (void**) &a_d, vector_size );
-    cudaMalloc( (void**) &b_d, vector_size );
-    cudaMalloc( (void**) &c_d, vector_size );
+    cudaMalloc( (void**) &a_d, matrix_size );
+    cudaMalloc( (void**) &b_d, matrix_size );
+    cudaMalloc( (void**) &c_d, matrix_size );
 
-    // initialize vectors and copy them to device
-    for ( int i = 0; i < n; i++ )
+    // initialize matrices and copy them to device
+    for ( int i = 0; i < n*m; i++ )
     {
         a[i] =   1.0 * i;
-        b[i] = 100.0 * i;
+        b[i] = 100.0 * i;        
     }
-    cudaMemcpy( a_d, a, vector_size, cudaMemcpyHostToDevice );
-    cudaMemcpy( b_d, b, vector_size, cudaMemcpyHostToDevice );
+    cudaMemcpy( a_d, a, matrix_size, cudaMemcpyHostToDevice );
+    cudaMemcpy( b_d, b, matrix_size, cudaMemcpyHostToDevice );
 
     // do calculation on device
-    int block_size = 16;
-    int num_blocks = ( n - 1 + block_size ) / block_size;
-    add_vectors<<< num_blocks, block_size >>>( c_d, a_d, b_d, n );
+    dim3 block_size( 16, 16 );
+    dim3 num_blocks( ( n - 1 + block_size.x ) / block_size.x, ( m - 1 + block_size.y ) / block_size.y );
+                   
+    add_matrices<<< num_blocks, block_size >>>( c_d, a_d, b_d, m, n );
 
     // retrieve result from device and store on host
-    cudaMemcpy( c, c_d, vector_size, cudaMemcpyDeviceToHost );
+    cudaMemcpy( c, c_d, matrix_size, cudaMemcpyDeviceToHost );
 
     // print results for vectors up to length 100
-    if ( n <= 100 )
+    if ( n <= 100 && m <= 100)
     {
-        for ( int i = 0; i < n; i++ )
+        for ( int i = 0; i < m; i++ )
         {
-            printf( "%8.2f + %8.2f = %8.2f\n", a[i], b[i], c[i] );
+            for (int j = 0; j < n; j++)
+            {
+                printf("%4.0f ", a[i*n + j]);
+            }
+            printf("  ");
+            for (int j = 0; j < n; j++)
+            {
+                printf("%4.0f ", b[i*n + j]);
+            }
+            printf("  ");
+            for (int j = 0; j < n; j++)
+            {
+                printf("%4.0f ", c[i*n + j]);
+            }
+            printf("\n");
+            
         }
     }
 
